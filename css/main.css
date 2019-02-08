@@ -1,0 +1,42 @@
+@import "variables.css";
+@import "board.css";
+:root {
+    --playerone: gold;
+    --playertwo: yellow;
+    --background: orange;
+}
+
+body{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+h1 {
+    color: var(---background);
+    font-size: 40px;
+    margin: 0;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.80);
+
+    transform: translate(-20vw, 25px) rotate(-10deg);
+}
+
+h2#turn-indicator {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+h2#turn-indicator #turn-color.player1{
+    color: var(--playerone);
+}
+
+h2#turn-indicator #turn-color.player2{
+    color: var(--playertwo);
+}
+
+

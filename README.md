@@ -2,7 +2,6 @@
 
 ## Todo
 - [x] Markup
-- [ ] Styles
+- [x] Styles
 - [ ] Generate Board
 - [ ] Turn logic
-- [ ] Win Logic
