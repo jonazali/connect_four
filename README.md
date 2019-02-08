@@ -1,8 +1,7 @@
 # Connect Four
 
 ## Todo
-- [ ] Markup
-- [ ] Styles
+- [x] Markup
+- [x] Styles
 - [ ] Generate Board
 - [ ] Turn logic
-- [ ] 
