@@ -2,8 +2,12 @@
 @import "board.css";
 :root {
     --playerone: gold;
-    --playertwo: yellow;
-    --background: orange;
+    --playertwo: silver;
+    --background: rgb(12, 0, 82);
+}
+
+html{
+    background-color: skyblue;
 }
 
 body{
