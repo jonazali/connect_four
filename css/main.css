@@ -6,6 +6,10 @@
     --background: rgb(12, 0, 82);
 }
 
+html{
+    background-color: skyblue;
+}
+
 body{
     display: flex;
     justify-content: flex-start;
