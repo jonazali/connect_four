@@ -2,7 +2,7 @@
 @import "board.css";
 :root {
     --playerone: gold;
-    --playertwo: silver;
+    --playertwo: red;
     --background: rgb(12, 0, 82);
 }
 
@@ -25,7 +25,15 @@ h1 {
     margin: 0;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.80);
 
-    transform: translate(-20vw, 25px) rotate(-10deg);
+    transform: translate(-30vw, 60px) rotate(-10deg);
+}
+
+#actual_button{
+    height: 100px;
+    width: 200px;
+    border-radius: 25px;
+    border: 5px solid black;
+    background-color: white;
 }
 
 h2#turn-indicator {
