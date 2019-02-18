@@ -20,6 +20,7 @@ for (let row = BOARDROWS - 1; row >= 0; row--) {
     `;
   }
 }
+
 // set the board's HTML
 board.innerHTML = boardHTML;
 
