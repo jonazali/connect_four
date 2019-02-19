@@ -1,11 +1,28 @@
 import { checkWin } from './win-logic.js';
 import { BOARDCOLS, BOARDROWS, board, playerIndicator, resetButton } from './constants.js';
 
-sessionStorage.setItem("score1", 0);
-document.getElementById("score1").innerHTML = sessionStorage.getItem("score1");
+var val1;
+var val2;
 
-sessionStorage.setItem("score2", 0);
-document.getElementById("score2").innerHTML = sessionStorage.getItem("score2");
+redo();
+
+function redo(){
+
+  resetButton.innerHTML = ``;
+
+if(val1 == undefined){
+  val1 = 0;
+}
+
+if(val2 == undefined){
+  val2 = 0;
+}
+
+localStorage.setItem("score1", val1);
+document.getElementById("score1").innerHTML = localStorage.getItem("score1");
+
+localStorage.setItem("score2", val2);
+document.getElementById("score2").innerHTML = localStorage.getItem("score2");
 // setup board
 
   let boardHTML = '';
@@ -58,6 +75,15 @@ function runTurn(event) {
     const player = player1Turn ? 'player1' : 'player2';
     turnIndicator.innerHTML += `<span class="${player}" id="player-indicator"></span> wins`;
 
+    console.log(player);
+    if(player == "player1"){
+      val1++;
+    }
+
+    else{
+      val2++;
+    }
+
     // get all checkboxs
     const checkboxes = document.querySelectorAll('.slot input[type=checkbox]');
 
@@ -68,14 +94,7 @@ function runTurn(event) {
 
     resetButton.innerHTML = `<button id="actual_button"><h2>RESET</h2></button>`;
 
-    function resetBoard() {
-      
-      location.reload();
-      sessionStorage.setItem("score1");
-
-    }
-
-    actual_button.onclick = resetBoard;
+    actual_button.onclick = redo;
 
     return;
   }
@@ -98,3 +117,7 @@ function runTurn(event) {
 }
 
 window.runTurn = runTurn;
+
+}
+
+
