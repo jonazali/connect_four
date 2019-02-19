@@ -1,7 +1,6 @@
-@import "variables.css";
 @import "board.css";
 :root {
-    --playerone: gold;
+    --playerone: yellow;
     --playertwo: red;
     --background: rgb(12, 0, 82);
 }
@@ -42,6 +41,22 @@ h2#turn-indicator {
     padding: 15px;
     text-transform: uppercase;
 }
+
+h2#player1{
+    background-color: black;
+    color: yellow;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+
+h2#player2{
+    background-color: black;
+    color: red;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
 
 h2#turn-indicator #turn-color.player1{
     color: var(--playerone);

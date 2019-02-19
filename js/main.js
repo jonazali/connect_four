@@ -1,30 +1,24 @@
 import { checkWin } from './win-logic.js';
 import { BOARDCOLS, BOARDROWS, board, playerIndicator, resetButton } from './constants.js';
 
-var val1;
-var val2;
-
+var val1 = 0;
+var val2 = 0;
 redo();
 
 function redo(){
 
-  resetButton.innerHTML = ``;
+//Make the reset button into nothing
+resetButton.innerHTML = ``;
 
-if(val1 == undefined){
-  val1 = 0;
-}
-
-if(val2 == undefined){
-  val2 = 0;
-}
-
+//store the scores
 localStorage.setItem("score1", val1);
-document.getElementById("score1").innerHTML = localStorage.getItem("score1");
-
 localStorage.setItem("score2", val2);
-document.getElementById("score2").innerHTML = localStorage.getItem("score2");
-// setup board
 
+//display the scores on the scoreboard
+document.getElementById("score1").innerHTML = localStorage.getItem("score1");
+document.getElementById("score2").innerHTML = localStorage.getItem("score2");
+
+// setup board
   let boardHTML = '';
   for (let row = BOARDROWS - 1; row >= 0; row--) {
     // iterate over rows, going down
