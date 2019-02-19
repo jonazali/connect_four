@@ -1,6 +1,11 @@
 import { checkWin } from './win-logic.js';
 import { BOARDCOLS, BOARDROWS, board, playerIndicator, resetButton } from './constants.js';
 
+sessionStorage.setItem("score1", 0);
+document.getElementById("score1").innerHTML = sessionStorage.getItem("score1");
+
+sessionStorage.setItem("score2", 0);
+document.getElementById("score2").innerHTML = sessionStorage.getItem("score2");
 // setup board
 
   let boardHTML = '';
@@ -64,7 +69,9 @@ function runTurn(event) {
     resetButton.innerHTML = `<button id="actual_button"><h2>RESET</h2></button>`;
 
     function resetBoard() {
+      
       location.reload();
+      sessionStorage.setItem("score1");
 
     }
 
